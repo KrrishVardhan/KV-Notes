@@ -1,12 +1,12 @@
+import React from "react";
+import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import { Button } from "@/components/ui/8bit/button"
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-  CardContent,
-  CardAction
+  CardTitle
 } from "@/components/ui/8bit/card"
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -58,12 +58,22 @@ function App() {
         <NavBar />
       </div>
       <main className="flex"
-        style={{
-          backgroundImage: `radial-gradient(circle at 0.5px 0.5px, rgba(255,255,255,0.3) 0.5px, transparent 0px)`,
-          backgroundSize: "8px 8px"
-        }}
       >
-        <article className="flex md:p-10 p-7 flex-wrap gap-15 min-h-screen"
+        <DottedGlowBackground
+        className="pointer-events-none mask-radial-to-90% md:block hidden mask-radial-at-center h-screen"
+        opacity={0.8}
+        gap={12}
+        radius={1.6}
+        colorLightVar="--color-neutral-500"
+        glowColorLightVar="--color-neutral-600"
+        colorDarkVar="--color-neutral-500"
+        glowColorDarkVar="--color-sky-800"
+        backgroundOpacity={0}
+        speedMin={0.3}
+        speedMax={1.6}
+        speedScale={1}
+      />
+        <article className="flex md:p-10 p-7 flex-wrap md:gap-15 gap-3 min-h-screen"
         >
           {pdfList.map((pdf) => (
             <Card className="w-full max-w-sm h-fit">
