@@ -1,3 +1,5 @@
 # KV-Notes 
 ### Made for my Batchmates 
 > Thank You for so many Memories...
+
+Install -  `bun i`
